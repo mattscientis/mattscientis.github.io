@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mattcryption</title>
+        <style>
+            body {
+                max-width: 700px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+                font-family: system-ui, sans-serif;
+            }
+            form {
+                display: grid;
+                gap: 0.5rem;
+            }
+            input, textarea, button {
+                font: inherit;
+            }
+            textarea {
+                min-height: 8rem;
+                resize: vertical;
+            }
+            button {
+                justify-self: start;
+                padding: 0.5rem 1rem;
+            }
+            #status {
+                color: #b00020;
+                min-height: 1.25rem;
+            }
+            #result {
+                white-space: pre-wrap;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+        <a href="../../../index.html" > <b>Home</b> </a>
+        <a href="../../index.html"><b>Encryption</b></a>
+        </header>
+        <main>
+            <h1>Decryption</h1>
+            <a href="../encryption/index.html">Encryption</a><br><br><br>
+            <form id="form">
+                <label for="key">Key:</label>
+                <input type="text" id="key" name="key" required>
+
+                <label for="text">Encrypted text:</label>
+                <textarea id="text" name="text" required></textarea>
+
+                <button type="submit">Decrypt</button>
+            </form>
+            <p id="status" role="alert"></p>
+            <p>Result:<br><span id="result"></span></p>
+        </main>
+        <script src="./decryption.js"></script>
+    </body>
+</html>
